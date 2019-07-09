@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>survey page</h1>
+    <form>
+        <label for="Name">Name:</label>
+        <input type="text" id = 'name'>
+        <br><br>
+
+        <label for="Photo">Photo URL:</label>
+        <input type="text" id = 'picture'>
+        <br><br>
+
+        <label for="Question 1">Question 1</label>
+        <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+        <select name="Question 2" id="question1">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 2">Question 2</label>
+        <p>Generally speaking, you rely more on your experience than your imagination.</p>
+        <select name="Question 2" id="question2">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 3">Question 3</label>
+        <p>You find it easy to stay relaxed and focused even when there is some pressure</p>
+        <select name="Question 3" id="question3">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 4">Question 4</label>
+        <p>You rarely do something just out of sheer curiosity.</p>
+        <select name="Question 4" id="question4">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 5">Question 5</label>
+        <p>People can rarely upset you.</p>
+        <select name="Question 5" id="question5">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 6">Question 6</label>
+        <p>It is often difficult for you to relate to other people’s feelings.</p>
+        <select name="Question 6" id="question6">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 7">Question 7</label>
+        <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+        <select name="Question 7" id="question7">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 8">Question 8</label>
+        <p>You rarely get carried away by fantasies and ideas.</p>
+        <select name="Question 8" id="question8">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 9">Question 9</label>
+        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+        <select name="Question 9" id="question9">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+
+        <label for="Question 10">Question 10</label>
+        <p>You feel more energetic after spending time with a group of people.</p>
+        <select name="Question 10" id="question10">
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly disagree)</option>
+        </select>
+        <br><br>
+        <button id='submit'>Submit</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#submit').on('click', function(event) {
+            event.preventDefault();
+            let answers = [];
+
+            for(let i = 1; i<=10; i++) {
+                answers.push(parseInt($(`#question${i}`).val()))
+            }
+
+            let newFriend = {
+                name : $('#name').val().trim(),
+                picture: $('#picture').val().trim(),
+                answers: answers
+            }
+
+            $.post("/api/friends", newFriend, function(data) {
+                console.log('add.html',data);
+            })
+
+        })
+    </script>
+</body>
+</html>
