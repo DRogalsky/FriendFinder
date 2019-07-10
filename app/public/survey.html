@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
     <h1>survey page</h1>
     <form>
         <label for="Name">Name:</label>
-        <input type="text" id = 'name'>
+        <input type="text" id='name'>
         <br><br>
 
         <label for="Photo">Photo URL:</label>
-        <input type="text" id = 'picture'>
+        <input type="text" id='picture'>
         <br><br>
 
         <label for="Question 1">Question 1</label>
@@ -24,7 +28,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -35,7 +39,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -46,7 +50,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -57,7 +61,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -68,7 +72,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -79,7 +83,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -90,7 +94,7 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -101,18 +105,19 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
         <label for="Question 9">Question 9</label>
-        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+        </p>
         <select name="Question 9" id="question9">
             <option value="1">1 (strongly disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
 
@@ -123,33 +128,101 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (strongly disagree)</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         <br><br>
         <button id='submit'>Submit</button>
     </form>
 
+    <!-- booooooootstraaaaaaaaaaaaaaap -->
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">FriendFinder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Your friend is...</h3>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
     <script>
-        $('#submit').on('click', function(event) {
+        function compareScores(arr1, arr2) {
+            let difference = [];
+            for (let i = 0; i < 10; i++) {
+                difference.push(Math.abs(parseInt(arr1[i] - arr2[i])))
+            }
+            return difference.reduce((acc, num) => acc + num, 0)
+        }
+
+        function makeModal(object) {
+            let theModal = $('.modal-body');
+            console.log(object)
+            theModal.append($('<img>').attr('src', object.picture))
+            theModal.append($('<h3>').text(object.name))
+            $('.modal').modal('show')
+        }
+
+        function matcher(person, friends) {
+            let friendValue = []
+            for (friend in friends) {
+                friendValue.push(compareScores(person.answers, friends[friend].answers));
+            }
+            let chosen = friendValue.reduce((a, b) => Math.min(a, b))
+            console.log(friends[friendValue.indexOf(chosen)]);
+            console.log('your friend is ' + friends[friendValue.indexOf(chosen)].name);
+            makeModal(friends[friendValue.indexOf(chosen)])
+        }
+
+        $('#submit').on('click', function (event) {
             event.preventDefault();
             let answers = [];
 
-            for(let i = 1; i<=10; i++) {
+            for (let i = 1; i <= 10; i++) {
                 answers.push(parseInt($(`#question${i}`).val()))
             }
 
             let newFriend = {
-                name : $('#name').val().trim(),
+                name: $('#name').val().trim(),
                 picture: $('#picture').val().trim(),
                 answers: answers
             }
 
-            $.post("/api/friends", newFriend, function(data) {
-                console.log('add.html',data);
+            $.ajax({
+                url: '/api/friends',
+                method: 'GET'
+            }).then(function (data) {
+                matcher(newFriend, data)
+                $.post("/api/friends", newFriend, function (data) {
+                    console.log('add.html', data);
+                })
             })
+
+
 
         })
     </script>
 </body>
+
 </html>
